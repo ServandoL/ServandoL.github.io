@@ -2,42 +2,66 @@ h1 {
     text-align: center;
 }
 
-.page {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+div.page {
+    margin-left: 15%;
+    padding: 1px 16px;
+    height: 1000px;
 }
-.about_me {
-    display: flex;
+div.about_me {
+    /* display: flex; */
+    margin: 5%;
+    padding: 0px 100px;
     justify-content: center;
     align-items: center;
 }
 
-body {margin: 0;}
 
-ul.topnav {
+/* Sidenav */
+ul.sidenav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    background-color:white;
 }
 
-ul.topnav li {float: left;}
-
-ul.topnav li a {
+ul.sidenav li a {
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+    color: #000000;
+    padding: 8px 16px;
     text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #111;}
-ul.topnav li a.active {background-color: #4CAF50;}
+ul.sidenav li a.active {
+    background-color: whitesmoke;
+    color: mediumvioletred;
+}
 
-@media screen and (max-width: 600px) {
-    ul.topnav li.right,
-    ul.topnav li {float: none;}
+ul.sidenav li a:hover:not(.active) {
+    background-color: white;
+    color: mediumvioletred;
+}
+
+@media screen and (max-width: 900px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.page {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
 }
